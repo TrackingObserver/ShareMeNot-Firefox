@@ -1,0 +1,7 @@
+Add exceptions support (and preferences dialog for this) to the Firefox version
+
+Make the icon in the add-on bar act more like the Page Action icon in the Chrome version
+(i.e., show and hide when the user switches tabs; treat the icon on a per-window basis)
+
+Don't execute the content script if we're in an iframe
+that we specifically loaded (minor performance improvement)

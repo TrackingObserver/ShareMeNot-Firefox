@@ -1,0 +1,76 @@
+{
+	"name": "sharemenot", 
+	"fullName": "ShareMeNot",
+	
+	"description": "Prevents third-party buttons embedded by sites from tracking you until you actually click on them.",
+	
+	"author": "ShareMeNot Team", 
+	
+	"homepage": "http://sharemenot.cs.washington.edu/",
+	
+	"icon": "icons/48.png",
+	"icon64": "icons/64.png",
+	
+	"license": "MIT License (http://sharemenot.cs.washington.edu/License.shtml)", 
+	
+	"version": "2.3.1", 
+	
+	"id": "sharemenot@franziroesner.com", 
+    
+    "preferences": [
+		{
+			"name": "replaceButtons",
+			"title": "Replace social buttons with local versions (better privacy but may affect layout on some webpages)",
+			"type": "bool",
+			"value": true
+		},
+    		{
+			"name": "blockAddThisTrackers",
+			"title": "Block AddThis Trackers",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "blockDiggTrackers",
+			"title": "Block Digg Trackers",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "blockFacebookTrackers",
+			"title": "Block Facebook Trackers",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "blockGoogle+Trackers",
+			"title": "Block Google+ Trackers",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "blockLinkedInTrackers",
+			"title": "Block LinkedIn Trackers",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "blockPinterestTrackers",
+			"title": "Block Pinterest Trackers",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "blockStumbleUponTrackers",
+			"title": "Block StumbleUpon Trackers",
+			"type": "bool",
+			"value": true
+		},
+		{
+			"name": "blockTwitterTrackers",
+			"title": "Block Twitter Trackers",
+			"type": "bool",
+			"value": true
+		}
+	]
+}

@@ -1,0 +1,88 @@
+<!-- 
+ShareMeNot is licensed under the MIT license:
+http://www.opensource.org/licenses/mit-license.php
+
+
+Copyright (c) 2012 University of Washington
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<script src="../Shared/Assert.js"></script>
+		<script src="Popup.js"></script>
+		<script src="Browser Abstraction Layer.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="Popup.css">
+		
+		<title>ShareMeNot Popup</title>
+	</head>
+	<body>
+		<div id="blockedTrackersMessage" class="hidden">
+			<p>Social media trackers were blocked on this page.</p>
+		
+			<div id="unblockAllButtonContainer">
+				<button id="unblockAllButton">Allow all trackers this time</button>
+			</div>
+		
+			<hr>
+			
+			<div id="trackerListContainer">
+				<p>Blocking trackers from:</p>
+				<ul id="trackerList">
+					<!-- Prototype list element for listing each tracker -->
+					<li id="trackerListElementPrototype" class="hidden">
+						<label>
+							<input type="checkbox" class="enabledCheckbox">
+							<span class="trackerName"></span>
+						</label>
+						<span class="blockedTrackerCountContainer">
+							<span class="blockedTrackerCount"></span> blocked
+						</span>
+					</li>
+				</ul>
+			</div>
+		
+			<hr>
+		
+			<div id="hiddenArea">
+				<div id="reloadWarning">
+					<p>ShareMeNot must reload the current page to allow trackers that
+					   were blocked when the page loaded.
+					</p>
+		
+					<button id="reloadConfirmButton">Reload Page</button>
+				</div>
+			</div>
+		</div>
+		
+		<div id="noBlockedTrackersMessage" class="hidden">
+			<p>ShareMeNot didn’t find any social media trackers to block on this page.</p>
+		</div>
+		
+		<div id="footer">
+			<button id="doneButton">Done</button>
+		</div>
+	</body>
+</html>

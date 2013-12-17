@@ -1,0 +1,4 @@
+/* Highlight color when clicked */
+body:active {
+	background-color: rgba(0, 0, 0, 0.25);
+}
