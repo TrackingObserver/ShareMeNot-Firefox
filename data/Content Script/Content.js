@@ -198,10 +198,33 @@ function replaceButtonWithHtmlCodeAndUnblockTracker(button, tracker, html) {
 			codeContainer.innerHTML = html;
 			
 			button.parentNode.replaceChild(codeContainer, button);
+
+			replaceScriptsRecurse(codeContainer);
 			
 			button.removeEventListener("click");
 		}
 	});
+}
+
+/**
+ * Dumping scripts into innerHTML won't execute them, so replace them
+ * with executable scripts.
+ */
+function replaceScriptsRecurse(node) {
+        if (node.getAttribute && node.getAttribute("type") == "text/javascript") {
+                var script  = document.createElement("script");
+                script.text = node.innerHTML;
+                script.src = node.src;
+                node.parentNode.replaceChild(script, node);
+        } else {
+                var i = 0;
+                var children = node.childNodes;
+                while ( i < children.length) {
+                        replaceScriptsRecurse(children[i]);
+                        i++;
+                }
+        }
+        return node;
 }
 
 /**
